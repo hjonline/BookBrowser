@@ -14,12 +14,12 @@ import (
 	"syscall"
 	"time"
 
-	_ "github.com/geek1011/BookBrowser/formats/epub"
-	_ "github.com/geek1011/BookBrowser/formats/mobi"
-	_ "github.com/geek1011/BookBrowser/formats/pdf"
-	"github.com/geek1011/BookBrowser/server"
-	"github.com/geek1011/BookBrowser/util"
-	"github.com/geek1011/BookBrowser/util/sigusr"
+	_ "github.com/hjonline/BookBrowser/formats/epub"
+	_ "github.com/hjonline/BookBrowser/formats/mobi"
+	_ "github.com/hjonline/BookBrowser/formats/pdf"
+	"github.com/hjonline/BookBrowser/server"
+	"github.com/hjonline/BookBrowser/util"
+	"github.com/hjonline/BookBrowser/util/sigusr"
 	"github.com/spf13/pflag"
 )
 
@@ -136,7 +136,7 @@ func main() {
 }
 
 func checkUpdate() {
-	resp, err := http.Get("https://api.github.com/repos/geek1011/BookBrowser/releases/latest")
+	resp, err := http.Get("https://api.github.com/repos/hjonline/BookBrowser/releases/latest")
 	if err != nil {
 		return
 	}

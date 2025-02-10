@@ -11,9 +11,9 @@ import (
 	"runtime/debug"
 
 	"github.com/beevik/etree"
-	"github.com/geek1011/BookBrowser/booklist"
-	"github.com/geek1011/BookBrowser/formats"
-	"github.com/geek1011/BookBrowser/util"
+	"github.com/hjonline/BookBrowser/booklist"
+	"github.com/hjonline/BookBrowser/formats"
+	"github.com/hjonline/BookBrowser/util"
 	"github.com/pkg/errors"
 )
 

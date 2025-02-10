@@ -1,4 +1,4 @@
-module github.com/geek1011/BookBrowser
+module github.com/hjonline/BookBrowser
 
 go 1.13
 

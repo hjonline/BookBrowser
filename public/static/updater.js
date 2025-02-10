@@ -37,8 +37,8 @@ window.checkForUpdates = function(version) {
         }
     };
     var HOUR = 3600;
-    cachedXHR("https://api.github.com/repos/geek1011/BookBrowser/releases", HOUR / 2, function (respa) {
-        cachedXHR("https://api.github.com/repos/geek1011/BookBrowser/releases/latest", HOUR / 2, function (respb) {
+    cachedXHR("https://api.github.com/repos/hjonline/BookBrowser/releases", HOUR / 2, function (respa) {
+        cachedXHR("https://api.github.com/repos/hjonline/BookBrowser/releases/latest", HOUR / 2, function (respb) {
             try {
                 var releases = JSON.parse(respa);
                 var current = JSON.parse(respb);
@@ -91,13 +91,13 @@ window.checkForUpdates = function(version) {
                     "</style>"
                 ].join("\n");
 
-                var message = "<b>You are not using the latest version of BookBrowser. Your current version is " + currentVersion + ", but the latest version is " + latestVersion + ".</b><br><br>You can download the latest version <a href=\"https://github.com/geek1011/BookBrowser/releases/latest\" target=\"_blank\">here</a>.<br><br>The release notes for the versions up to " + latestVersion + " are below.<br><br>";
+                var message = "<b>You are not using the latest version of BookBrowser. Your current version is " + currentVersion + ", but the latest version is " + latestVersion + ".</b><br><br>You can download the latest version <a href=\"https://github.com/hjonline/BookBrowser/releases/latest\" target=\"_blank\">here</a>.<br><br>The release notes for the versions up to " + latestVersion + " are below.<br><br>";
                 message += releaseNotes;
 
                 console.log(message);
 
                 if (window.location.pathname == "/books/") {
-                    picoModal('<h2>BookBrowser Update Available</h2>' + message + '<br><a type="button" target="_blank" href="https://github.com/geek1011/BookBrowser/releases/latest" class="btn btn-primary">Update</a>').show();
+                    picoModal('<h2>BookBrowser Update Available</h2>' + message + '<br><a type="button" target="_blank" href="https://github.com/hjonline/BookBrowser/releases/latest" class="btn btn-primary">Update</a>').show();
                 }
             } catch (err) {
                 console.warn(err);

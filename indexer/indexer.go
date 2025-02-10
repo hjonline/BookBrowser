@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/geek1011/BookBrowser/booklist"
-	"github.com/geek1011/BookBrowser/formats"
+	"github.com/hjonline/BookBrowser/booklist"
+	"github.com/hjonline/BookBrowser/formats"
 
 	zglob "github.com/mattn/go-zglob"
 	"github.com/nfnt/resize"
