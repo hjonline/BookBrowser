@@ -527,7 +527,7 @@ App.prototype.doDictionary = function (word) {
     meaningsEl.classList.add("meanings");
     meaningsEl.innerHTML = "Loading";
 
-    fetch(`https://149.104.12.227:13630/word/${encodeURIComponent(word)}`).then(resp => {
+    fetch(`http://149.104.12.227:13630/word/${encodeURIComponent(word)}`).then(resp => {
         if (resp.status >= 500) throw new Error(`Dictionary not available`);
         return resp.json();
     }).then(obj => {
